@@ -1,3 +1,3 @@
-import { renderInRouter } from './renderInRouter'
+import { renderInRouter } from './hocs/renderInRouter'
 
 export { renderInRouter }
