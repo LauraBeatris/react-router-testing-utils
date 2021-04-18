@@ -1,11 +1,10 @@
 import React from 'react'
-import { MemoryHistory } from 'history';
 import { render } from "@testing-library/react";
-import { Router } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 
-export const renderInRouter = (Comp: React.FC, history: MemoryHistory) =>
+export const renderInRouter = (Comp: React.FC, initialEntries: ['/']) =>
   render(
-    <Router history={history}>
+    <MemoryRouter initialEntries={initialEntries}>
       <Comp />
-    </Router>
+    </MemoryRouter>
   );
