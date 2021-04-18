@@ -35,19 +35,19 @@ describe('renderInRouter HOC', () => {
   })
 
   it('Accesses initial history', () => {
-    const { testHistory } = renderInRouter(ExampleAppRoutes, {
+    const { history } = renderInRouter(ExampleAppRoutes, {
       shouldCheckHistory: true
     })
 
-    expect(testHistory?.location.pathname).toBe(EXAMPLE_HOME_PAGE_ROUTE_NAME)
+    expect(history?.location.pathname).toBe(EXAMPLE_HOME_PAGE_ROUTE_NAME)
   })
 
   it('Updates history according to navigation', () => {
-    const { testHistory } = renderInRouter(ExampleAppRoutes, {
+    const { history } = renderInRouter(ExampleAppRoutes, {
       shouldCheckHistory: true
     })
 
-    expect(testHistory?.location.pathname).toBe('/')
+    expect(history?.location.pathname).toBe('/')
 
     fireEvent(
       screen.getByRole('link'),
@@ -57,6 +57,6 @@ describe('renderInRouter HOC', () => {
       })
     )
 
-    expect(testHistory?.location.pathname).toBe('/about')
+    expect(history?.location.pathname).toBe('/about')
   })
 })

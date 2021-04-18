@@ -10,7 +10,7 @@ export type RenderInRouterArguments = {
 }
 
 export type RenderInRouterReturnType = RenderResult & {
-  testHistory?: History<any>
+  history?: History<any>
 }
 
 /**
@@ -21,7 +21,7 @@ export const renderInRouter = (Component: React.FC, {
   renderOptions,
   shouldCheckHistory = false
 }: RenderInRouterArguments = {}): RenderInRouterReturnType => {
-  let testHistory
+  let history
 
   const renderPayload = render(
     <MemoryRouter initialEntries={initialEntries}>
@@ -31,8 +31,8 @@ export const renderInRouter = (Component: React.FC, {
         (shouldCheckHistory) && (
           <Route
             path='*'
-            render={({ history }) => {
-              testHistory = shouldCheckHistory ? history : undefined
+            render={({ history: renderedHistory }) => {
+              history = shouldCheckHistory ? renderedHistory : undefined
 
               return null
             }}
@@ -43,6 +43,6 @@ export const renderInRouter = (Component: React.FC, {
 
   return {
     ...renderPayload,
-    testHistory
+    history
   }
 }
