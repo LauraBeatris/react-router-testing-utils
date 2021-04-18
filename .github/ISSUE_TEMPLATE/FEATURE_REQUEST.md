@@ -2,7 +2,7 @@
 name: "Feature Request"
 about: Suggest an idea for react-router-testing-utils roadmap
 title: ''
-labels: Feature Request/API Enhancement 
+labels: Feature Request
 assignees: ''
 
 ---
