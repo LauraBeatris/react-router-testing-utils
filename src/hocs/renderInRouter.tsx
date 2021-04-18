@@ -28,7 +28,7 @@ export const renderInRouter = (Component: React.FC, {
       <Component />
 
       {
-        (shouldCheckHistory) && (
+        shouldCheckHistory && (
           <Route
             path='*'
             render={({ history: renderedHistory }) => {
