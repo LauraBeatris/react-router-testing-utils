@@ -22,7 +22,9 @@ module.exports = {
     'import/order': ['error', {
       groups: ['builtin', 'external', 'internal'],
       'newlines-between': 'always-and-inside-groups'
-    }]
+    }],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn'
   },
   globals: {
     React: 'writable'
