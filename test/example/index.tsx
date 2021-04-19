@@ -1,8 +1,20 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
+import { useQueryParam, StringParam, QueryParamProvider } from 'use-query-params'
 
+export const EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME = '/query-params'
 export const EXAMPLE_ABOUT_PAGE_ROUTE_NAME = '/about'
 export const EXAMPLE_HOME_PAGE_ROUTE_NAME = '/'
+
+export const ExampleQueryParamsPage = () => {
+  const [, setFoo] = useQueryParam('foo', StringParam)
+
+  return (
+    <section data-test-id='example-query-params-page'>
+      <button onClick={() => setFoo('foo')}>Set foo filter</button>
+    </section>
+  )
+}
 
 export const ExampleAboutPage = () => (
   <section data-testid='example-about-page'>
@@ -27,6 +39,10 @@ export const ExampleHomePage = () => (
 
 export const EXAMPLE_APP_ROUTES = [
   {
+    path: EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME,
+    component: ExampleQueryParamsPage
+  },
+  {
     path: EXAMPLE_ABOUT_PAGE_ROUTE_NAME,
     component: ExampleAboutPage
   },
@@ -37,11 +53,11 @@ export const EXAMPLE_APP_ROUTES = [
 ]
 
 export const ExampleAppRoutes = () => (
-  <>
+  <QueryParamProvider ReactRouterRoute={Route}>
     {EXAMPLE_APP_ROUTES.map(({ path, component: Component }) => (
       <Route path={path} key={path}>
         <Component />
       </Route>
     ))}
-  </>
+  </QueryParamProvider>
 )
