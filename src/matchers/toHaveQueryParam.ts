@@ -9,8 +9,6 @@ export const toHaveQueryParam = (
   const paramValue = searchParams.get(queryParamName)
   const paramHasGivenValue = paramValue === queryParamValue
 
-  console.log({ hasParam, paramValue })
-
   const pass = hasParam && paramHasGivenValue
   const message = () => hasParam
     ? `${queryParamName} wasn't found in ${locationSearch}`
