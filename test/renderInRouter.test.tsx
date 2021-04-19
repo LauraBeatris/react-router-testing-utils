@@ -1,7 +1,8 @@
 import { screen, fireEvent } from '@testing-library/react'
 
 import { renderInRouter } from '../src/index'
-import { EXAMPLE_HOME_PAGE_ROUTE_NAME, ExampleAppRoutes } from '../src/example'
+
+import { EXAMPLE_HOME_PAGE_ROUTE_NAME, ExampleAppRoutes } from './example'
 
 describe('renderInRouter HOC', () => {
   it('Renders component', () => {
