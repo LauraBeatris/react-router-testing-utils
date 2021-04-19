@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
 
-import { EXAMPLE_ABOUT_PAGE_ROUTE_NAME } from '../index'
+import { EXAMPLE_ABOUT_PAGE_ROUTE_NAME } from '../../routes'
 
 export const ExampleHomePage = () => (
   <main data-testid='example-home-page'>

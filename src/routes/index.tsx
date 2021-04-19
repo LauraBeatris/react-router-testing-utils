@@ -2,8 +2,8 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 // Pages
-import { ExampleHomePage } from './Home'
-import { ExampleAboutPage } from './About'
+import { ExampleHomePage } from '../pages/Home'
+import { ExampleAboutPage } from '../pages/About'
 
 export const EXAMPLE_ABOUT_PAGE_ROUTE_NAME = '/about'
 export const EXAMPLE_HOME_PAGE_ROUTE_NAME = '/'
