@@ -1,17 +1,31 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import { useQueryParam, StringParam, QueryParamProvider } from 'use-query-params'
+import { useQueryParam, NumberParam, QueryParamProvider } from 'use-query-params'
 
 export const EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME = '/query-params'
 export const EXAMPLE_ABOUT_PAGE_ROUTE_NAME = '/about'
 export const EXAMPLE_HOME_PAGE_ROUTE_NAME = '/'
 
+export const EXAMPLE_FILTERS = [
+  {
+    name: 'Page 1',
+    value: 1
+  },
+  {
+    name: 'Page 2',
+    value: 2
+  }
+]
+
 export const ExampleQueryParamsPage = () => {
-  const [, setFoo] = useQueryParam('foo', StringParam)
+  const [, setFilter] = useQueryParam('filter', NumberParam)
 
   return (
     <section data-test-id='example-query-params-page'>
-      <button onClick={() => setFoo('foo')}>Set foo filter</button>
+      <h3>Select page</h3>
+      {EXAMPLE_FILTERS.map(({ name, value }) => (
+        <button key={name} onClick={() => setFilter(value)}>{name}</button>
+      ))}
     </section>
   )
 }
