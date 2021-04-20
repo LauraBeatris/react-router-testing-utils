@@ -1,6 +1,5 @@
 import { screen, fireEvent } from '@testing-library/dom'
 
-import '../src/extend-expect'
 import { renderInRouter } from '../src'
 
 import { ExampleAppRoutes, EXAMPLE_FILTERS, EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME } from './example'
