@@ -32,7 +32,7 @@ describe('renderInRouter HOC', () => {
       })
     )
 
-    screen.getByTestId('example-about-page')
+    screen.getByTestId('example-about-page').toBeVisible()
   })
 
   it('Accesses initial history', () => {
