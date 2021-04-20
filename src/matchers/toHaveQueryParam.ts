@@ -7,18 +7,10 @@ export const toHaveQueryParam = (
 
   const hasParam = searchParams.has(queryParamName)
 
-  if (!hasParam) {
+  if (!expectedQueryParamValue) {
     return {
-      pass: false,
+      pass: hasParam,
       message: () => `${queryParamName} wasn't found in ${locationSearch}`
-    }
-  }
-
-  const shouldOnlyCheckExistence = hasParam && !expectedQueryParamValue
-
-  if (shouldOnlyCheckExistence) {
-    return {
-      pass: true
     }
   }
 
