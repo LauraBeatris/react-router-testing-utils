@@ -16,7 +16,7 @@ describe('Custom Jest Matchers', () => {
       expect(history?.location.search).not.toHaveQueryParam('foo', 'foo')
     })
 
-    it('pass if query param exists & is equal to expected value', () => {
+    it('passes if query param exists & is equal to expected value', () => {
       const { history } = renderInRouter(ExampleAppRoutes, {
         shouldCheckHistory: true,
         initialEntries: [EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME]
