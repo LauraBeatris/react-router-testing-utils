@@ -27,18 +27,16 @@ export const renderInRouter = (Component: React.FC, {
     <MemoryRouter initialEntries={initialEntries}>
       <Component />
 
-      {
-        shouldCheckHistory && (
-          <Route
-            path='*'
-            render={({ history: renderedHistory }) => {
-              history = shouldCheckHistory ? renderedHistory : undefined
+      {shouldCheckHistory && (
+        <Route
+          path='*'
+          render={({ history: renderedHistory }) => {
+            history = shouldCheckHistory ? renderedHistory : undefined
 
-              return null
-            }}
-          />
-        )
-      }
+            return null
+          }}
+        />
+      )}
     </MemoryRouter>, renderOptions)
 
   return {
