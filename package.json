@@ -30,11 +30,6 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest.setup.ts"
-    ]
-  },
   "name": "react-router-testing-utils",
   "author": "Laura Beatris <laurabeatriserafim@gmail.com> (https://laurabeatris.com)",
   "module": "dist/react-router-testing-utils.esm.js",
