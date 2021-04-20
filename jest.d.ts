@@ -3,7 +3,7 @@ declare global {
     interface Matchers<R> {
       toHaveQueryParam(
         queryParamName: string,
-        queryParamValue: any
+        expectedQueryParamValue?: any
       ): R
     }
   }
