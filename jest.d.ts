@@ -1,12 +1,9 @@
-declare global {
-  namespace jest {
-    interface Matchers<R> {
-      toHaveQueryParam(
-        queryParamName: string,
-        expectedQueryParamValue?: any
-      ): R
-    }
+declare namespace jest {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  interface Matchers<R> {
+    toHaveQueryParam(
+      queryParamName: string,
+      expectedQueryParamValue?: any
+    ): CustomMatcherResult;
   }
 }
-
-export {}
