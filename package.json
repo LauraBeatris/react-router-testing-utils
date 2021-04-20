@@ -47,6 +47,7 @@
     "@size-limit/preset-small-lib": "^4.10.2",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
+    "@types/jest": "^26.0.22",
     "@types/react": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
