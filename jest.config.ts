@@ -3,7 +3,7 @@ import type { Config } from '@jest/types'
 const jestConfig: Config.InitialOptions = {
   preset: 'ts-jest',
   setupFilesAfterEnv: [
-    '<rootDir>/jest.setup.ts'
+    '<rootDir>/../jest.setup.ts'
   ]
 }
 
