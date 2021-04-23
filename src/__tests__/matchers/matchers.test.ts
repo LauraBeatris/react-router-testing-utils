@@ -1,7 +1,6 @@
 import { screen, fireEvent } from '@testing-library/dom'
 
-import { renderInRouter } from '../../src'
-
+import { renderInRouter } from '../..'
 import { ExampleAppRoutes, EXAMPLE_FILTERS, EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME } from '../appExample'
 
 describe('toHaveQueryParam matcher', () => {
