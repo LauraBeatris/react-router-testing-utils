@@ -50,6 +50,7 @@
     "@types/jest": "^26.0.22",
     "@types/react": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
+    "@types/testing-library__jest-dom": "^5.9.5",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-eslint": "^10.1.0",
