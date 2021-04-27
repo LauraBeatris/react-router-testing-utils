@@ -1,3 +1,7 @@
 import { renderInRouter } from './hocs/renderInRouter'
+import { ParamTypes } from './utils/serialize'
 
-export { renderInRouter }
+export {
+  ParamTypes,
+  renderInRouter
+}
