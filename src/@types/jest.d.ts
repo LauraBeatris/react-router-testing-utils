@@ -1,8 +1,13 @@
 namespace jest {
+  import { QueryParamConfig } from 'serialize-query-params'
+
   interface Matchers<R> {
     toHaveQueryParam(
-      queryParamName: string,
-      expectedQueryParamValue?: unknown
+      expectedQueryParam: {
+        name: string;
+        value: any;
+        type: QueryParamConfig<any, any>
+      }
     ): CustomMatcherResult;
   }
 }
