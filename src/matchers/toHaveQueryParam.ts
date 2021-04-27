@@ -15,11 +15,14 @@ export const toHaveQueryParam = (
   }
 
   const paramValue = searchParams.get(queryParamName)
-  // TODO - Do not parse param to string and handle all types of values
   const paramHasGivenValue = paramValue === String(expectedQueryParamValue)
+
+  const formatExpectedQueryParamValue = typeof expectedQueryParamValue === 'object'
+    ? JSON.stringify(expectedQueryParamValue)
+    : expectedQueryParamValue
 
   return {
     pass: paramHasGivenValue,
-    message: () => `${queryParamName} query param value is expected to be ${expectedQueryParamValue} but the received value is ${paramValue}`
+    message: () => `${queryParamName} query param value is expected to be ${formatExpectedQueryParamValue} but the received value is ${paramValue}`
   }
 }
