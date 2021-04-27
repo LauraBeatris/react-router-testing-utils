@@ -36,11 +36,11 @@
   "size-limit": [
     {
       "path": "dist/react-router-testing-utils.cjs.production.min.js",
-      "limit": "65 KB"
+      "limit": "70 KB"
     },
     {
       "path": "dist/react-router-testing-utils.esm.js",
-      "limit": "65 KB"
+      "limit": "70 KB"
     }
   ],
   "devDependencies": {
