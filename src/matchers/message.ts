@@ -4,9 +4,9 @@ export interface CustomMatcherMessagePayload {
 }
 
 export class CustomMatcherMessage {
-  public readonly pass: boolean;
+  public readonly pass: CustomMatcherMessagePayload['pass'];
 
-  public readonly message: () => string;
+  public readonly message: CustomMatcherMessagePayload['message'];
 
   constructor ({ pass, message }: CustomMatcherMessagePayload) {
     this.message = message
