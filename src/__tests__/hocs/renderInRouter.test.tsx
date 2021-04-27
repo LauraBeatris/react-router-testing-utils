@@ -1,8 +1,7 @@
 import { screen, fireEvent } from '@testing-library/react'
 
-import { renderInRouter } from '../src/index'
-
-import { EXAMPLE_HOME_PAGE_ROUTE_NAME, ExampleAppRoutes } from './example'
+import { renderInRouter } from '../../index'
+import { EXAMPLE_HOME_PAGE_ROUTE_NAME, ExampleAppRoutes } from '../appExample'
 
 describe('renderInRouter HOC', () => {
   it('Renders component', () => {
@@ -32,7 +31,7 @@ describe('renderInRouter HOC', () => {
       })
     )
 
-    screen.getByTestId('example-about-page')
+    expect(screen.getByTestId('example-about-page')).toBeVisible()
   })
 
   it('Accesses initial history', () => {

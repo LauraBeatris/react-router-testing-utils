@@ -10,7 +10,7 @@ module.exports = {
     'plugin:import/typescript'
   ],
   plugins: [
-    'import'
+    'import', 'jest-dom'
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
