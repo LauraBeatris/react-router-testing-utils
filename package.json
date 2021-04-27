@@ -1,11 +1,12 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "src",
+    "extend-expect.ts"
   ],
   "engines": {
     "node": ">=10"
@@ -43,14 +44,22 @@
       "limit": "70 KB"
     }
   ],
-  "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.10.2",
-    "@testing-library/jest-dom": "^5.11.10",
+  "dependencies": {
     "@testing-library/react": "^11.2.6",
     "@types/lodash.isequal": "^4.5.5",
     "@types/react": "^17.0.3",
     "@types/react-router-dom": "^5.1.7",
-    "@types/testing-library__jest-dom": "^5.9.5",
+    "history": "^5.0.0",
+    "lodash.isequal": "^4.5.0",
+    "query-string": "^7.0.0",
+    "react-router-dom": "^5.2.0",
+    "serialize-query-params": "^1.3.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.10.2",
+    "@testing-library/jest-dom": "^5.11.10",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-eslint": "^10.1.0",
@@ -66,13 +75,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "history": "^5.0.0",
     "husky": "^6.0.0",
-    "lodash.isequal": "^4.5.0",
-    "query-string": "^7.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
     "size-limit": "^4.10.2",
     "ts-jest": "^26.5.5",
     "tsdx": "^0.14.1",
