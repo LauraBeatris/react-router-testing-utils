@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import { DateParam, NumberParam, ObjectParam, QueryParamProvider, useQueryParam } from 'use-query-params'
+import { ArrayParam, NumberParam, ObjectParam, QueryParamProvider, useQueryParam } from 'use-query-params'
 
 export const EXAMPLE_QUERY_PARAMS_PAGE_ROUTE_NAME = '/query-params'
 export const EXAMPLE_ABOUT_PAGE_ROUTE_NAME = '/about'
@@ -9,14 +9,14 @@ export const EXAMPLE_HOME_PAGE_ROUTE_NAME = '/'
 export const ExampleQueryParamsPage = () => {
   const [, setFilterNumber] = useQueryParam('filter-number', NumberParam)
   const [, setFilterObject] = useQueryParam('filter-object', ObjectParam)
-  const [, setFilterDate] = useQueryParam('filter-date', DateParam)
+  const [, setFilterArray] = useQueryParam('filter-array', ArrayParam)
 
   return (
     <section data-test-id='example-query-params-page'>
       <h3>Select filter</h3>
       <button onClick={() => setFilterNumber(1)}>Number</button>
       <button onClick={() => setFilterObject({ foo: 'foo' })}>Object</button>
-      <button onClick={() => setFilterDate(new Date('2020-02-02'))}>Date</button>
+      <button onClick={() => setFilterArray(['1'])}>Array</button>
     </section>
   )
 }
