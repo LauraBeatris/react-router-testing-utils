@@ -10,7 +10,7 @@ export interface ExpectedQueryParam {
   value: any;
 }
 
-type EncodedValue = string | string[] | null | (string | null)[] | undefined
+type EncodedValue = string | string[] | null
 
 export const validateArguments = ({
   name,
@@ -59,17 +59,13 @@ export const encodeValues = ({
   }
 }
 
-export const validateResult = ({
+export const validateValues = ({
   name,
   value,
   encodedExpectedValue,
   encodedReceivedValue,
   decodedReceivedValue
-}: Pick<ExpectedQueryParam, 'name' | 'value'> & {
-  encodedReceivedValue: EncodedValue,
-  encodedExpectedValue: EncodedValue,
-  decodedReceivedValue: EncodedValue
-}) => {
+}: Pick<ExpectedQueryParam, 'name' | 'value'> & ReturnType<typeof encodeValues>) => {
   throw new CustomMatcherMessage({
     pass: isEqual(decodedReceivedValue, value),
     message: () => `${name} query param is expected to be ${encodedExpectedValue} but the received value is ${encodedReceivedValue}`

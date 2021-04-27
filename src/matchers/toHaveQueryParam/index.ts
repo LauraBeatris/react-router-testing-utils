@@ -1,6 +1,6 @@
 import {
   encodeValues,
-  validateResult,
+  validateValues,
   validateArguments,
   ExpectedQueryParam
 } from './helpers'
@@ -32,7 +32,7 @@ export const toHaveQueryParam = (
       encodedReceivedValue
     })
 
-    validateResult({
+    validateValues({
       name,
       value,
       encodedExpectedValue,
