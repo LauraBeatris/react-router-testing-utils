@@ -14,9 +14,9 @@ export type RenderInRouterReturnType = RenderResult & {
 }
 
 /**
-  * @description
-  * Allows you to render a given component in a Router for un-browser environments
-*/
+ * @description
+ * Allows you to render a given component in a Router for un-browser environments
+ */
 export const renderInRouter = (Component: React.FC, {
   initialEntries = ['/'],
   renderOptions,
@@ -32,7 +32,7 @@ export const renderInRouter = (Component: React.FC, {
         <Route
           path='*'
           render={({ history: renderedHistory }) => {
-            history = shouldCheckHistory ? renderedHistory : undefined
+            history = renderedHistory
 
             return null
           }}
