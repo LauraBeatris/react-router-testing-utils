@@ -13,7 +13,7 @@ import {
  * * It's name is contained in the location search
  * * It's value is contained in the location search
  * * It's given type corresponds to it's decoded value
-*/
+ */
 export const toHaveQueryParam = (
   locationSearch: Location['search'],
   {
