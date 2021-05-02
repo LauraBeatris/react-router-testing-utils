@@ -9,10 +9,13 @@ import {
  * @description
  * This allows you to check if a location search has a certain query param value.
  *
- * A query param is contained in a location search if **all** the following conditions are met:
- * * It's name is contained in the location search
- * * It's value is contained in the location search
- * * It's given type corresponds to it's decoded value
+ * @example
+ * "https://mywebsite.com/home?page=1"
+ *
+ * expect(location.search).toHaveQueryParam({ name: page, value: 1, type: NumberParam })
+ *
+ * @see
+ * [react-router-testing-utils#tohavequeryparam](https://github.com/LauraBeatris/react-router-testing-utils#tohavequeryparam)
  */
 export const toHaveQueryParam = (
   locationSearch: Location['search'],
